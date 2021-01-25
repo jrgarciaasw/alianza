@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+// styles.scss 
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
+
+:root {
+    --gray-letter: #9b9a9a;
+    --blue: #283380;
+    --azure: #0088CC;
+    --white: #ffffff;
+}   
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

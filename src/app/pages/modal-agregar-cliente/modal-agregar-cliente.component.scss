@@ -1,0 +1,41 @@
+.card-form {    
+    background-color: lavender;
+    border-color: var(--gray-letter);
+    border-style: solid;
+  }
+
+.btn-ok {
+    width: 3.906rem;
+    height: calc(1.5em + 0.75rem + 2px);
+    font-size: 1rem;
+    font-weight: 400;
+    position: absolute;
+    line-height: 1.5;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: var(--azure);    
+  }
+  
+  .txt-btn-2 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.075rem;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.43;
+      letter-spacing: 0.42px;
+      text-align: center;
+      color: var(--white);
+    }
+  
+    .txt-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.075rem;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.43;
+      letter-spacing: 0.42px;
+      text-align: left;
+      color: var(--gray-letter);
+    }

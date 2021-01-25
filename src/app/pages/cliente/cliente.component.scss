@@ -1,0 +1,164 @@
+.image {
+  width: 20px;
+}
+
+.edit {
+  width: 48px;
+}
+
+.btn {
+  width: 8.906rem;
+  height: 3.563rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: var(--azure);
+  margin: 0 1.5rem;
+}
+
+.btn:hover {
+  background-color: var(--blue);
+}
+
+.btn-activa:hover {
+  background-color: var(--azure);
+}
+
+.btn-activa {
+  width: 7.906rem;
+  height: 1.683rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: var(--blue);
+}
+
+.txt-btn {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.475rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: 0.42px;
+  text-align: center;
+  color: var(--white);
+}
+
+.form-busqueda {
+  text-align: center;
+  width: 35%;
+}
+
+.input-busqueda {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #f1f1f1;
+  background-color: var(--white-two);
+
+  &:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+}
+
+.btn-busqueda {
+  width: 12.906rem;
+  height: calc(1.5em + 0.75rem + 2px);
+  font-size: 1rem;
+  font-weight: 400;
+  position: absolute;
+  line-height: 1.5;
+}
+
+.btn-ok {
+  width: 3.906rem;
+  height: calc(1.5em + 0.75rem + 2px);
+  font-size: 1rem;
+  font-weight: 400;
+  position: absolute;
+  line-height: 1.5;
+}
+
+.txt-btn-2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.075rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.42px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  .txt-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.075rem;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.42px;
+    text-align: left;
+    color: var(--gray-letter);
+  }
+
+  .titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.563rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.88;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--azure);
+  }
+
+  .card-form {
+    width: 50%;
+    background-color: lavender;
+    border-color: var(--gray-letter);
+    border-style: solid;
+  }
+
+  .img-editar{
+    cursor: pointer;
+  }
+  
+  @media all and (min-width: 768px) {
+    tr  {
+      td {
+        vertical-align: middle !important;
+      }
+      span {
+        &:not([class]) {
+          padding: 1rem 1rem;
+        }
+      }
+    }
+  }
+
+.form-busqueda {
+  text-align: center;
+  min-width: 50%;
+  display: flex;
+
+  @media (max-width: 567px) {
+    width: 70%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-busqueda {
+    width: auto;
+  }
+}
+
+@media (max-width: 567px) {
+  .form-busqueda {
+    width: 45%;
+  }
+}

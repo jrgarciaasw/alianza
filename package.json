@@ -12,15 +12,23 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.0.3",
+    "@angular/cdk": "^10.2.7",
     "@angular/common": "~10.0.3",
     "@angular/compiler": "~10.0.3",
     "@angular/core": "~10.0.3",
     "@angular/forms": "~10.0.3",
+    "@angular/localize": "^10.0.14",
+    "@angular/material": "^10.2.7",
     "@angular/platform-browser": "~10.0.3",
     "@angular/platform-browser-dynamic": "~10.0.3",
     "@angular/router": "~10.0.3",
+    "@ng-bootstrap/ng-bootstrap": "^9.0.1",
+    "bootstrap": "^4.6.0",
+    "file-server": "^2.1.0",
+    "ngx-bootstrap": "^6.2.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
+    "xlsx": "^0.16.9",
     "zone.js": "~0.10.3"
   },
   "devDependencies": {

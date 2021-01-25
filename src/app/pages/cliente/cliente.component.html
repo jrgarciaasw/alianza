@@ -1,0 +1,154 @@
+<div class='row'>
+    <div class='col-12 mt-4'>
+        <button type="button" id="new" class="btn" (click)="agregarCliente()">
+            <span class="txt-btn">
+                <img src="assets/plus.png" class="mr-3 image" alt="">
+                New</span>
+        </button>
+        <button type="button" id="export" class="btn" (click)="exportar()">
+            <span class="txt-btn">
+                <img src="assets/export.png" class="mr-3 image" alt="">
+                Export</span>
+        </button>
+    </div>
+    <div class="col-12 mt-4">
+        <form class="toggle-pro form-inline d-none d-lg-block mr-auto form-busqueda">
+            <input [(ngModel)]="nombreKey" maxlength="50" name="nombreKey"
+                class="campo-busqueda form-control input-busqueda" type="text" placeholder="Enter shared key"
+                autocomplete="off" (change)="actualizarBusqueda()">
+            <button class="btn btn-busqueda" data-toggle="collapse" data-target="#collapseAdvancedSearch"
+                aria-expanded="false" aria-controls="collapseAdvancedSearch">
+                <span class="txt-btn-2">Advanced Search</span>
+            </button>
+        </form>
+    </div>
+
+    <div class="col-12 collapse" id="collapseAdvancedSearch">
+        <div class="card-form pt-2 pb-5">
+            <form class="needs-validation mt-3" novalidate>
+                <div class="form-group row">
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                        <label class="txt-label" for="validationName">Name</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control " id="validationName" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                        <label class="txt-label" for="validationPhone">Phone</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control " id="validationPhone" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                        <label class="txt-label" for="validationEmail">E-mail</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="email" class="form-control " id="validationEmail" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                        <label class="txt-label" for="validationStartDate">Start Date</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="date" class="form-control " id="validationStartDate" name="startDate"
+                            placeholder="" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                        <label class="txt-label" for="validationEndDate">End Date</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="date" class="form-control " id="validationEndDate" name="endDate" placeholder=""
+                            required>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-9 text-right">
+                        <button class="btn btn-ok" type="button">
+                            <span class="txt-btn-2">OK</span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-12 mt-4">
+        <span class="titulo">Clients</span>
+        <!-- Editable table -->
+
+
+        <div class="card mt-4 mb-4" style="width: 95%;">
+            <div id="table" class="table-editable">
+
+                <table class="table table-bordered table-responsive-md table-striped text-center" id="excel-table">
+                    <tr>
+                        <th class="text-center" scope>Shared Key</th>
+                        <th class="text-center" scope>Business ID</th>
+                        <th class="text-center" scope>E-mail</th>
+                        <th class="text-center" scope>Phone</th>
+                        <th class="text-center" scope>Data Added</th>
+                        <th class="text-center" scope> <img src="assets/ico_editar.png" class="mr-3 edit" alt=""> </th>
+                    </tr>
+                    <tr *ngFor="let person of personList; let id = index">
+                        <td>
+                            <span (keyup)="changeValue(id, 'username', $event)"
+                                (blur)="updateList(id, 'username', $event)"
+                                contenteditable="true">{{person.username}}</span>
+                        </td>
+                        <td>
+                            <span contenteditable="true" (keyup)="changeValue(id, 'bussines', $event)"
+                                (blur)="updateList(id, 'bussines', $event)">{{person.bussines}}</span>
+                        </td>
+                        <td>
+                            <span contenteditable="true" (keyup)="changeValue(id, 'email', $event)"
+                                (blur)="updateList(id, 'email', $event)">{{person.email}}</span>
+                        </td>
+                        <td>
+                            <span contenteditable="true" (keyup)="changeValue(id, 'phone', $event)"
+                                (blur)="updateList(id, 'phone', $event)">{{person.phone}}</span>
+                        </td>
+                        <td>
+                            <span contenteditable="true" (keyup)="changeValue(id, 'date', $event)"
+                                (blur)="updateList(id, 'date', $event)">{{person.date}}</span>
+                        </td>
+
+                        <td>
+                            <span class="table-edit">
+                                <img size="sm" class="my-0 img-editar" src="assets/ico_editar_azul.png" (click)="edit(id)" alt="">
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Editable table -->
+    </div>
+</div>
